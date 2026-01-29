@@ -105,6 +105,8 @@ main {
     font-weight: bold;
     color: var(--primary-color);
     font-style: normal;
+    background-color: transparent;
+    padding: 0;
 }
 
 .curriculum {
