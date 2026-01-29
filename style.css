@@ -297,46 +297,74 @@ footer {
 }
 
 .modal-content {
-    background-color: #C2185B; /* Dark Pink */
+    background: linear-gradient(135deg, #D81B60 0%, #880E4F 100%); /* Festive Gradient */
     margin: 15% auto;
-    padding: 2.5rem;
-    border: none;
+    padding: 3rem 2.5rem;
+    border: 2px solid #FFCC33; /* Gold Border */
     width: 90%;
     max-width: 450px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 20px rgba(255, 204, 51, 0.2); /* Deep shadow + Gold glow */
     text-align: center;
     position: relative;
     color: #FFCC33; /* Gold */
+    overflow: hidden; /* For the watermark */
+}
+
+/* Watermark decorative element */
+.modal-content::before {
+    content: '2026';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    font-size: 8rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05);
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Ensure content stays above watermark */
+.modal-content h2, 
+.modal-content p, 
+.close-btn {
+    position: relative;
+    z-index: 1;
 }
 
 .close-btn {
     color: #FFCC33;
     float: right;
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 1;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.2s, transform 0.2s;
+    transition: transform 0.2s;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .close-btn:hover,
 .close-btn:focus {
     color: #fff;
     text-decoration: none;
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(90deg);
 }
 
 .modal-content h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .modal-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-weight: 500;
 }
