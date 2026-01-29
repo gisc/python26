@@ -188,7 +188,7 @@ footer {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #ffc0cb; /* Pink background */
     margin: 15% auto; /* 15% from the top and centered */
     padding: 2rem;
     border: 1px solid #888;
@@ -209,7 +209,8 @@ footer {
 
 .modal-content p {
     font-size: 1.2rem;
-    color: #333;
+    color: #FFCC33; /* Gold color */
+    font-weight: bold;
 }
 
 .close-btn {
